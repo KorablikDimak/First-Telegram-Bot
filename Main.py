@@ -345,7 +345,7 @@ if __name__ == '__main__':
                        'нарисуй график': wait_graph,
                        'сделай график': wait_graph}
 
-
+        
         @bot.message_handler(commands=['start'])
         def start_work(message):
             person_id = message.from_user.id
