@@ -13,12 +13,12 @@ if __name__ == '__main__':
 
 
     driver = webdriver.Chrome()
-    bot = telebot.TeleBot('****')
+    bot = telebot.TeleBot('1718596856:AAFkQZz3_IlyW9UkNg1OVm230h74iQyrmXs')
 
 
     with connect(
-        user='****',
-        password='****',
+        user='root',
+        password='Faggot_2002',
         host='127.0.0.1',
         database='Users'
     ) as connection:
