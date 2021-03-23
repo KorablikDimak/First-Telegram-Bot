@@ -158,22 +158,6 @@ if __name__ == '__main__':
                 else:
                     break
 
-            '''url = 'https://stock.adobe.com/ru/search?load_type=search&native_visual_search=&similar_content_id=&is_recent_search=&search_type=usertyped&k=' + message.text
-        
-            response = requests.get(url)
-            soup = BeautifulSoup(response.content, 'lxml')
-            image_list = []
-            actual_image = []
-        
-            for link in soup.find_all('img'):
-                image_list.append(link.get('src'))
-        
-            for i in range(0, len(image_list)):
-                if 'http' in image_list[i] and '.jpg' in image_list[i]:
-                    actual_image.append(image_list[i])
-                else:
-                    pass'''
-
             r = random.randint(0, len(actual_image))
 
             try:
@@ -273,46 +257,7 @@ if __name__ == '__main__':
 
             action = 'riphm'
             bot.register_next_step_handler(message, more, words, action)
-
-
-            '''url = 'https://makeword.ru/rhyme/' + message.text
-        
-            response = requests.get(url)
-            soup = BeautifulSoup(response.content, 'lxml')
-        
-            texts = soup.find_all('a')
-            words = []
-        
-            for text in texts:
-                words.append(text.text)
-        
-            for i in range(0, len(words)):
-                if words[i] == '\nРифма к слову\n':
-                    first = i + 1
-                elif words[i] == '1':
-                    second = i
-                    break
-                elif 'Слова на букву' in words[i]:
-                    second = i
-                    break
-        
-            try:
-                words = words[first: second]
-                print(words)
-                r = random.randint(0, len(words) - 1)
-        
-                bot.send_message(message.from_user.id, words[r])
-            except:
-                bot.send_message(message.from_user.id, 'Я не смог найти рифму, сообщи об этом создателю')
-        
-            bot.send_message(message.from_user.id,
-                             'Если хочешь еще рифму к этому слову- напиши "еще".
-                             \nЕсли хочешь закончить- напиши "хватит".
-                             \nХочешь рифму к другому слову- просто напиши это слово.')
-        
-            action = 'riphm'
-            bot.register_next_step_handler(message, more, words, action)'''
-
+            
 
         def more(message, words, action):
 
