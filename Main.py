@@ -18,9 +18,9 @@ if __name__ == '__main__':
 
     with connect(
         user='****',
-        password='****2',
-        host='127.0.0.1',
-        database='Users'
+        password='****',
+        host='****',
+        database='****'
     ) as connection:
 
 
